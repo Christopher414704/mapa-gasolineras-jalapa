@@ -1,0 +1,4 @@
+packages:
+  - "apps/*"
+allowBuilds:
+  argon2: false
