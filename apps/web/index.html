@@ -18,12 +18,19 @@
 
   <body>
     <div id="app">
+      <main
+        id="cesiumContainer"
+        aria-label="Mapa 3D de gasolineras"
+      ></main>
+
       <header class="encabezado">
         <div>
-          <p class="subtitulo">Jalapa, Guatemala</p>
+          <p class="subtitulo">
+            Jalapa, Guatemala
+          </p>
 
           <h1>
-            Mapa de gasolineras y precios
+            Todos los precios de las gasolineras
           </h1>
         </div>
 
@@ -36,10 +43,45 @@
         </div>
       </header>
 
-      <main
-        id="cesiumContainer"
-        aria-label="Mapa 3D de gasolineras"
-      ></main>
+      <nav
+        class="menu-lateral"
+        aria-label="Apartados principales"
+      >
+        <button
+          class="pestana"
+          type="button"
+        >
+          Cambiar precios
+        </button>
+
+        <button
+          class="pestana pestana--activa"
+          type="button"
+        >
+          Mapa 3D
+        </button>
+
+        <button
+          class="pestana"
+          type="button"
+        >
+          Gasolineras
+        </button>
+
+        <button
+          class="pestana"
+          type="button"
+        >
+          Salir
+        </button>
+      </nav>
+
+      <aside
+        id="tableroPrecios"
+        class="tablero-precios"
+        aria-live="polite"
+        hidden
+      ></aside>
     </div>
 
     <script
